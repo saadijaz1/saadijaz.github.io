@@ -41,6 +41,3 @@ Contributions to this project are welcome! If you find any issues, have suggesti
 
 ### License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-<br>
-Thank you for visiting the makbn.github.io repository! Your contributions and feedback are highly appreciated. Enjoy customizing your personal website and showcasing your work to the world!
