@@ -1,29 +1,44 @@
-<nav id="entireNavbar" class="navbar is-fixed-top">
-  <div id="specialShadow" class="bd-special-shadow" style="opacity: 1; transform: scaleY(1);"></div>
-  <div class="container">
-    <div class="navbar-brand">
-      <a class="navbar-item navbar-logo" href="{{ site.baseurl }}/">
-        <img src="/resources/img/machine-learning.svg">&nbsp;<span class="heather">SAAD</span>&thinsp;<span class="miller">IJAZ</span>
-      </a>
-
-      <div id="navbarBurger" class="navbar-burger burger" data-target="navBar">
-        <span></span>
-        <span></span>
-        <span></span>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Page Title</title>
+  <!-- Add your CSS stylesheets and other head content here -->
+  <link rel="stylesheet" href="your-styles.css">
+  <!-- Add any other CSS or stylesheets you need -->
+  <style>
+    #entireNavbar.hidden {
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <!-- Your navbar HTML code -->
+  <nav id="entireNavbar" class="navbar is-fixed-top">
+    <div id="specialShadow" class="bd-special-shadow" style="opacity: 1; transform: scaleY(1);"></div>
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item navbar-logo" href="{{ site.baseurl }}/">
+          <img src="/resources/img/machine-learning.svg">&nbsp;<span class="heather">SAAD</span>&thinsp;<span class="miller">IJAZ</span>
+        </a>
+        <div id="navbarBurger" class="navbar-burger burger" data-target="navBar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-    </div>
-
-    <div id="navBar" class="navbar-menu">
-      <div class="navbar-start">
-        <!--Nothing here right now-->
-      </div>
-
-      <div class="navbar-end navbar-text">
-        <!-- <a class="navbar-item" href="https://bulma.io/"><span class="topbar-item">Blog</span></a> -->
-        <a class="navbar-item" href="{{ site.baseurl }}/index.html#background"><span class="topbar-item">Projects</span></a>
-        <a class="navbar-item" href="{{ site.baseurl }}/index.html#skills"><span class="topbar-item">Skills</span></a>
-        <!-- <div class="navbar-item has-dropdown is-hoverable"> -->
-        <!-- <a class="navbar-item" href="{{ site.baseurl }}/index.html#teaching"><span class="topbar-item">Teaching</span></a> -->
+      <div id="navBar" class="navbar-menu">
+        <div class="navbar-start">
+          <!--Nothing here right now-->
+        </div>
+        <div class="navbar-end navbar-text">
+          <!-- <a class="navbar-item" href="https://bulma.io/"><span class="topbar-item">Blog</span></a> -->
+          <a class="navbar-item" href="{{ site.baseurl }}/index.html#background"><span class="topbar-item">Projects</span></a>
+          <a class="navbar-item" href="{{ site.baseurl }}/index.html#skills"><span class="topbar-item">Skills</span></a>
+          <!-- <div class="navbar-item has-dropdown is-hoverable"> -->
+          <!-- <a class="navbar-item" href="{{ site.baseurl }}/index.html#teaching"><span class="topbar-item">Teaching</span></a> -->
           <!-- <a class="navbar-link" href="#teaching"><span class="topbar-item">Teaching</span></a> -->
           <!-- <div class="navbar-dropdown">
             <div class="navbar-item header">Current Semester</div>
@@ -36,10 +51,35 @@
             <a class="navbar-item" href="https://bulma.io/documentation/elements/box/">Elements</a>
             <a class="navbar-item is-active" href="https://bulma.io/documentation/components/breadcrumb/">Components</a>
           </div> -->
-        <!-- </div> -->
-        <a class="navbar-item" href="{{ site.baseurl }}/index.html#contact"><span class="topbar-item">Contact</span></a>
-
+          <!-- </div> -->
+          <a class="navbar-item" href="{{ site.baseurl }}/index.html#contact"><span class="topbar-item">Contact</span></a>
+        </div>
       </div>
     </div>
+  </nav>
+
+  <!-- Your page content goes here -->
+  <div class="content">
+    <h1>Welcome to Your Website</h1>
+    <p>This is your website content.</p>
+    <!-- Add your content here -->
   </div>
-</nav>
+
+  <!-- Add the JavaScript code here -->
+  <script>
+    var prevScrollPos = window.pageYOffset;
+
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollPos > currentScrollPos) {
+        // Scrolling up, show the navbar
+        document.getElementById("entireNavbar").classList.remove("hidden");
+      } else {
+        // Scrolling down, hide the navbar
+        document.getElementById("entireNavbar").classList.add("hidden");
+      }
+      prevScrollPos = currentScrollPos;
+    };
+  </script>
+</body>
+</html>
