@@ -44,8 +44,8 @@ sass:
 
 livereload: true
 
-plugins:
-  - jekyll-seo-tag
+# plugins:
+#   - jekyll-seo-tag
 
 
 social:
