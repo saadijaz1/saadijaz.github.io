@@ -13,8 +13,8 @@ $bluish-black: #283142;
 $almost-black: #171f2d;
 $light-blue-gray: #f1f8fc;
 $blue-gray: #7e97ad;
-$dark-blue-bg: #ffffff;
-$lighter-blue-bg: #E4E8ED;
+$dark-blue-bg: #0d2439;
+$lighter-blue-bg: #1f364d;
 $border-gray: transparentize($gray-text, 0.7);
 // --start: hsl(340, 55%, 45%);
 // --end: hsl(280, 45%, 55%);
@@ -66,12 +66,12 @@ code.highlighter-rouge {
 }
 
 .slogan {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  color: $almost-black;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  color: $white;
   font-size: $size-4;
   a {
-    color: $almost-black;
+    color: $white;
     border-bottom: solid 2px $dark-pink;
     &:hover,
     &.is-active {
@@ -89,11 +89,9 @@ code.highlighter-rouge {
 .collaborators {
   a {
     color: $blue-gray;
-    font-weight: 700 !important;
     &:hover,
     &.is-active {
-      color: $almost-black;
-      font-weight: 700 !important;
+      color: $white;
       border-bottom: solid 2px $dark-pink;
     }
   }
@@ -121,8 +119,8 @@ code.highlighter-rouge {
 }
 
 .navbar-text {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .navbar, #navBar {
@@ -136,7 +134,7 @@ code.highlighter-rouge {
 	&.is-active {
      transition: all;
      background-color: transparent !important;
-     color: $bluish-black;
+     color: $white;
      .topbar-item {
        border-bottom: solid 2px $dark-pink;
      }
@@ -200,7 +198,7 @@ code.highlighter-rouge {
 }
 
 .footer {
-  background-color: white;
+  background-color: $almost-black;
   color: $gray-text;
   font-weight: 400;
   a {
@@ -208,7 +206,7 @@ code.highlighter-rouge {
     &:hover,
     &.is-active {
       transition: all $base-duration;
-      color: $almost-black;
+      color: $white;
       border-bottom: solid 2px $dark-pink;
     }
   }
@@ -232,7 +230,7 @@ code.highlighter-rouge {
 
 .heather, .miller, .small-title-above {
   font-family: "Source Sans Pro";
-  color: black;
+  color: white;
   font-size: 22px;
 }
 .heather {
@@ -245,7 +243,7 @@ code.highlighter-rouge {
 }
 
 .small-title-above {
-  color: transparentize(black, 0.5);
+  color: transparentize(white, 0.5);
   text-transform: uppercase;
   margin-top: 1em;
 }
@@ -253,19 +251,10 @@ code.highlighter-rouge {
 .job {
   color: $gray-text;
   font-style: italic;
-
-  ul {
-    margin-left: 2em;
-    li {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      list-style-type: disc;
-    }
-  }
 }
 
 .list-head {
-  color: $almost-black;
+  color: $white;
   font-weight: bold;
 }
 
@@ -331,30 +320,25 @@ code.highlighter-rouge {
 
 
 .circular.heather {
-  background-image: url('{{ site.baseurl }}/resources/img/profilepic.jpg');
-  background-size: 125px 125px;
-
+  background-image: url('{{ site.baseurl }}/resources/img/heather.png');
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5) {
   .circular.heather {
-    background-image: url('{{ site.baseurl }}/resources/img/profilepic.jpg');
+    background-image: url('{{ site.baseurl }}/resources/img/heather@2x.png');
     background-size: 125px 125px;
   }
 }
 
 .large-white {
   font-size: $size-5;
-  color: $bluish-black;
+  color: $white;
   line-height: 1.3em;
-  .fa-li{
-    font-family: 'FontAwesome';
-  }
 }
 
 .at-a-glance-header {
   // text-align: center;
-  color: $almost-black;
+  color: $white;
   font-size: $size-4;
   font-weight: 700;
   margin-bottom: 16px;
@@ -374,14 +358,20 @@ code.highlighter-rouge {
 .service-table, .teaching, .publications {
   background-color: transparent !important;
   color: $blue-gray;
+  tbody {
+    border-color: $border-gray;
+  }
+  tr:hover {
+    background-color: transparentize($gray-text, 0.8);
+  }
   th, td {
     padding: 0.25em 0.75em;
     a {
       color: $blue-gray;
-      border-bottom: solid 1px transparent;
+      border-bottom: solid 1px $dark-pink;
       &:hover,
       &.is-active {
-        color: $almost-black;
+        color: $white;
       }
     }
   }
@@ -420,7 +410,7 @@ code.highlighter-rouge {
       border-bottom: solid 2px $dark-pink;
       &:hover,
       &.is-active {
-        color: $almost-black;
+        color: $white;
       }
     }
   }
@@ -428,7 +418,7 @@ code.highlighter-rouge {
 
 .teaching-head,
 .publication-head {
-  color: $almost-black;
+  color: $white;
   font-weight: bold;
   font-size: $size-5;
 }
@@ -438,13 +428,13 @@ code.highlighter-rouge {
 }
 
 .book-title {
-  color: $almost-black;
+  color: $white;
   font-weight: bold;
   font-size: $size-5;
 }
 
 .book-authors {
-  color: $almost-black;
+  color: $white;
   line-height: 1.2em;
   margin-bottom: 6px;
 }
@@ -457,7 +447,7 @@ code.highlighter-rouge {
 
 .book-oa {
   a {
-    color: $almost-black;
+    color: $white;
     border-bottom: solid 2px $dark-pink;
     &:hover {
       color: $blue-gray;
@@ -467,10 +457,10 @@ code.highlighter-rouge {
 
 .tag.mooc-label {
   background: linear-gradient(to right, $gator-pink, $gator-orange);
-  color: white;
+  color: $white;
   font-weight: bold;
   display: flex;
-  width: 170px;
+  width: 50px;
   height: 24px;
   // font-size: $size-6;
   // margin-top: -24px;
@@ -489,7 +479,7 @@ code.highlighter-rouge {
 .subsec-head {
   font-weight: bold;
   font-size: $size-5;
-  color: $almost-black;
+  color: $white;
 }
 
 .ercs {
@@ -553,7 +543,7 @@ code.highlighter-rouge {
 
 .pub-title {
   font-weight: bold;
-  color: $almost-black;
+  color: $white;
   padding-bottom: 4px;
   a {
      color: $white;
@@ -772,16 +762,12 @@ $scala-sm-height: 22px;
   color: $white;
 }
 
-.red_text {
-  color: $dark-pink;
-}
-
 .news,
 .research,
 .work {
   // color: $white;
   a {
-    color: $almost-black;
+    color: $white;
     border-bottom: solid 2px $dark-pink;
     &:hover,
     &.is-active {
@@ -823,7 +809,7 @@ $scala-sm-height: 22px;
   .title {
     font-weight: $weight-bold;
     font-size: 1rem;
-    color: $almost-black;
+    color: $white;
     margin-bottom: 0px;
   }
   .under-submission {
